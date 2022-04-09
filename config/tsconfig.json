@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": ["dom", "es2018"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "rootDir": "../../../src",
+    "pretty": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "declaration": true,
+    "declarationDir": "../../../dist/types",
+    "target": "es5",
+    "typeRoots": ["../../@types"]
+  },
+  "include": [
+    "../../../src"
+  ],
+  "exclude": [
+    "./node_modules",
+    "**/__tests__",
+    "**/examples",
+  ]
+}
