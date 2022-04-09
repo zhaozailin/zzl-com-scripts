@@ -3,7 +3,6 @@ const proxy = require('http-proxy-middleware');
 const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
-const cuiMockMiddleware = require('cui-mock-middleware');
 const { PROJ, isPlainObject, debug, fsExistsSync } = require('../utils');
 
 const options = require("../utils/getOptions")();
@@ -145,12 +144,7 @@ const proxyServer = (app) => {
       }
       prefix = rdrcPrefix.find((item) => { return prefix.indexOf(item) === 0 })
     }
-    return cuiMockMiddleware({
-      prefix: prefix,
-      dir: path.resolve(PROJ, "mock"),
-      mockTable: path.resolve(PROJ, "mock", "mockTable.js"),
-      pathRewrite: mockPathRewrite,
-    });
+    return null;
   } 
 
   if (options.rd) {

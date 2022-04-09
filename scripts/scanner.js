@@ -7,7 +7,7 @@ const projectName = options.name;
 const version = options.version;
 
 // stdio控制打印的位置，detached为false不增加新的进程
-const result = spawn('sonar-scanner -Dsonar.projectKey=cn.com.xx.' + projectKey + ' -Dsonar.projectName=' + projectName + ' -Dsonar.projectVersion=' + version + ' -Dproject.settings=node_modules/cui-com-scripts/config/sonar-project.properties', {shell: true, detached: false, stdio: 'inherit' });
+const result = spawn('sonar-scanner -Dsonar.projectKey=cn.com.xx.' + projectKey + ' -Dsonar.projectName=' + projectName + ' -Dsonar.projectVersion=' + version + ' -Dproject.settings=node_modules/zzl-com-scripts/config/sonar-project.properties', {shell: true, detached: false, stdio: 'inherit' });
 
 if (result.signal) {
 

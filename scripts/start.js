@@ -1,7 +1,7 @@
 const spawn = require('cross-spawn');
 
 // stdio控制打印的位置，detached为false不增加新的进程
-const result = spawn('start-storybook -p 9009 -c node_modules/cui-com-scripts/.storybook', {shell: true, detached: false, stdio: 'inherit' });
+const result = spawn('start-storybook -p 9009 -c node_modules/zzl-com-scripts/.storybook', {shell: true, detached: false, stdio: 'inherit' });
 
 if (result.signal) {
 

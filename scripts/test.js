@@ -5,7 +5,7 @@ const options = require("../utils/getOptions")();
 const update = options.update;
 
 // stdio控制打印的位置，detached为false不增加新的进程
-let shellStr = 'jest --coverage -c node_modules/cui-com-scripts/config/jest.config.js';
+let shellStr = 'jest --coverage -c node_modules/zzl-com-scripts/config/jest.config.js';
 if (update) {
   shellStr += ' -u'
 }
