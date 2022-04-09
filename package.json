@@ -26,13 +26,6 @@
     "name": "zhaozl"
   },
   "homepage": "https://github.com/zhaozailin/zzl-com-scripts",
-  "repository": {
-    "type": "git",
-    "url": "http://192.168.2.107/frontend/cui.git"
-  },
-  "bugs": {
-    "url": "http://192.168.2.107/frontend/cui/issues"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
