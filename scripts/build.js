@@ -1,7 +1,7 @@
 const spawn = require('cross-spawn');
 
 // stdio控制打印的位置，detached为false不增加新的进程
-const result = spawn('rimraf ./dist && webpack --config node_modules/zzl-com-scripts/config/webpack.prod.js && webpack --config node_modules/zzl-com-scripts/config/webpack.dev.js && node node_modules/zzl-com-scripts/utils/copyFile.js', {shell: true, detached: false, stdio: 'inherit' });
+const result = spawn('rimraf ./dist && webpack --config node_modules/zzl-com-scripts/config/webpack.prod.js', {shell: true, detached: false, stdio: 'inherit' });
 
 if (result.signal) {
 

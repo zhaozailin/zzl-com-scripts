@@ -10,13 +10,6 @@ export default (story) => {
   title = title.split(' ')[0];
   const stories = storiesOf(title, module);
   const README = require('../../../README.md');
-  const CHANGE_LOG = require('../../../CHANGE_LOG.md');
-
-  stories.add(`CHANGE_LOG`, () =>
-    React.createElement(
-      Markdown,{source: CHANGE_LOG}
-    )
-  );
 
   stories.add(`README`, () =>
     React.createElement(
