@@ -17,6 +17,6 @@ configure(loadStories, module);
 
 setOptions({
     showAddonPanel: false,
-    name: 'dpl-react',
+    name: 'react-best-table',
     sidebarAnimations: true
 });

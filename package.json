@@ -1,6 +1,6 @@
 {
   "name": "zzl-com-scripts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react UI组件构建工具",
   "bin": {
     "com-scripts": "./bin/com-scripts.js"

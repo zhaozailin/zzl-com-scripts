@@ -113,14 +113,14 @@ module.exports = {
         commonjs: 'react-dom',
         amd: 'react-dom',
       },
-      "dpl-react": {
-        root: 'dplReact',
-        commonjs2: 'dpl-react',
-        commonjs: 'dpl-react',
-        amd: 'dpl-react',
+      "antd": {
+        root: 'antd',
+        commonjs2: 'antd',
+        commonjs: 'antd',
+        amd: 'antd',
       },
     },
-    /^(dpl-react\/?.*)$/
+    /^(antd\/?.*)$/
   ],
   // 删掉后会默认执行压缩
   optimization: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Markdown from 'zzl-wix-storybook-utils/Markdown';
 import CodeExample from 'zzl-wix-storybook-utils/CodeExample';
-import '../../dpl-react/dist/dpl.css';
+import '../../antd/dist/antd.css';
 const pkg = require('../../../package.json');
 
 export default (story) => {

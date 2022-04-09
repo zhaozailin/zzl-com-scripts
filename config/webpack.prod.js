@@ -1,13 +1,12 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   entry: './src',
   output: {
     path: path.resolve(__dirname, '../../../dist'),
-    filename: '[name].min.js',
+    filename: '[name].js',
     libraryTarget: 'commonjs2'
   },
   resolve: {
@@ -115,22 +114,17 @@ module.exports = {
         commonjs: 'react-dom',
         amd: 'react-dom',
       },
-      "dpl-react": {
-        root: 'dplReact',
-        commonjs2: 'dpl-react',
-        commonjs: 'dpl-react',
-        amd: 'dpl-react',
+      "antd": {
+        root: 'antd',
+        commonjs2: 'antd',
+        commonjs: 'antd',
+        amd: 'antd',
       },
     },
-    /^(dpl-react\/?.*)$/
+    /^(antd\/?.*)$/
   ],
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true // set to true if you want JS source maps
-      }),
       new OptimizeCSSAssetsPlugin({})
     ]
   },
