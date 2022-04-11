@@ -3,7 +3,16 @@ import { storiesOf } from '@storybook/react';
 import Markdown from 'zzl-wix-storybook-utils/Markdown';
 import CodeExample from 'zzl-wix-storybook-utils/CodeExample';
 import '../../antd/dist/antd.css';
+import {Checkbox, Radio, Dropdown, Pagination} from '../../antd';
+import { configDependentComponents } from '../../../src/index';
 const pkg = require('../../../package.json');
+
+configDependentComponents({
+  Checkbox,
+  Radio,
+  Dropdown,
+  Pagination,
+});
 
 export default (story) => {
   let { name, title, list } = story;
