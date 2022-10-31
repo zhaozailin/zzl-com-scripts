@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Markdown from 'zzl-wix-storybook-utils/Markdown';
 import CodeExample from 'zzl-wix-storybook-utils/CodeExample';
 import '../../dpl-react/dist/dpl.css';
-import {Checkbox, Radio, Dropdown, Pagination, ConfigProvider} from '../../dpl-react';
+import {Checkbox, Radio, Dropdown, Pagination, Popover, ConfigProvider} from '../../dpl-react';
 import { configDependentComponents } from '../../../src/index';
 const pkg = require('../../../package.json');
 
@@ -12,6 +12,7 @@ configDependentComponents({
   Radio,
   Dropdown,
   Pagination,
+  Popover,
   ConfigProvider,
 });
 
