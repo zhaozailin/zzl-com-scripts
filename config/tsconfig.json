@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -9,7 +10,7 @@
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
-    "rootDir": "../../../src",
+    "rootDirs": ["../../../src", "../../../package.json"],
     "pretty": true,
     "removeComments": true,
     "skipLibCheck": true,

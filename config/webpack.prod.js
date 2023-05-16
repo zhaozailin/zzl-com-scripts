@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const pkg = require(resolve(__dirname, '../../../package.json'));
 
 module.exports = {
   entry: './src',
@@ -51,7 +52,8 @@ module.exports = {
           {
             loader: 'fast-sass-loader',
             options: {
-              javascriptEnabled: true
+              javascriptEnabled: true,
+              data: `$table-prefix-cls: v${pkg.version.replace(/\./g, '-')}-better-table;`,
             }
           }
         ],

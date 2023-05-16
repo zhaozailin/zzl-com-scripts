@@ -1,4 +1,5 @@
 const {resolve} = require("path");
+const pkg = require(resolve(__dirname, '../../../package.json'));
 module.exports = {
   resolve: {
     alias: {
@@ -59,7 +60,13 @@ module.exports = {
           {
             loader: 'css-loader',
           },
-          "fast-sass-loader"
+          {
+            loader: 'fast-sass-loader',
+            options: {
+              javascriptEnabled: true,
+              data: `$table-prefix-cls: v${pkg.version.replace(/\./g, '-')}-better-table;`,
+            }
+          }
         ],
         include: [resolve(__dirname, "../../../src"), resolve(__dirname, "../../zzl-wix-storybook-utils")]
       }
