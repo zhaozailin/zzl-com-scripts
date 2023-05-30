@@ -92,7 +92,7 @@ module.exports = {
       },
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules\/(?!use-context-selector|zzl-overlayscrollbars-react)/,
         use: {
           loader: 'babel-loader',
           options: {
