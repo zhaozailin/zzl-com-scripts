@@ -1,6 +1,6 @@
 {
   "name": "zzl-com-scripts",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "react UI组件构建工具",
   "bin": {
     "com-scripts": "./bin/com-scripts.js"
@@ -116,5 +116,8 @@
     "rmc-feedback": "^2.0.0",
     "shallowequal": "^1.0.1",
     "warning": "~3.0.0"
+  },
+  "resolutions": {
+    "coa": "2.0.2"
   }
 }

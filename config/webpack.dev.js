@@ -121,8 +121,21 @@ module.exports = {
         commonjs: 'antd',
         amd: 'antd',
       },
+      "dpl-react": {
+        root: 'dplReact',
+        commonjs2: 'dpl-react',
+        commonjs: 'dpl-react',
+        amd: 'dpl-react',
+      },
+      "tomato-ui/dist/h5/js/dpl": {
+        commonjs2: 'tomato-ui/dist/h5/js/dpl',
+        commonjs: 'tomato-ui/dist/h5/js/dpl',
+      },
     },
-    /^(antd\/?.*)$/
+    '@afe/rc-menu',
+    /^(antd\/?.*)$/,
+    /^(dpl-react\/?.*)$/,
+    /^(@dpl\/?.*)$/
   ],
   // 删掉后会默认执行压缩
   optimization: {

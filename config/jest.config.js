@@ -19,5 +19,8 @@ module.exports = {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": resolve(__dirname, '__tests__/styleMock.js'),
     "\\.(css|less|scss)$": resolve(__dirname, '__tests__/styleMock.js')
   },
-  testResultsProcessor: "jest-sonar-reporter"
+  testResultsProcessor: "jest-sonar-reporter",
+  transformIgnorePatterns: [
+    "/node_modules/(?!dpl-react).+\\.js$"
+  ],
 };

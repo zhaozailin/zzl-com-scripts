@@ -1,13 +1,16 @@
 const path = require('path');
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const pkg = require(path.resolve(__dirname, '../../../package.json'));
 
+const dist = process.env.dist || './dist';
+
 module.exports = {
   entry: './src',
   output: {
-    path: path.resolve(__dirname, '../../../dist'),
+    path: path.resolve(__dirname, '../../../', dist),
     filename: 'index.js',
     libraryTarget: 'commonjs2'
   },
@@ -123,8 +126,21 @@ module.exports = {
         commonjs: 'antd',
         amd: 'antd',
       },
+      "dpl-react": {
+        root: 'dplReact',
+        commonjs2: 'dpl-react',
+        commonjs: 'dpl-react',
+        amd: 'dpl-react',
+      },
+      "tomato-ui/dist/h5/js/dpl": {
+        commonjs2: 'tomato-ui/dist/h5/js/dpl',
+        commonjs: 'tomato-ui/dist/h5/js/dpl',
+      },
     },
-    /^(antd\/?.*)$/
+    '@afe/rc-menu',
+    /^(antd\/?.*)$/,
+    /^(dpl-react\/?.*)$/,
+    /^(@dpl\/?.*)$/
   ],
   optimization: {
     minimizer: [
@@ -137,6 +153,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
