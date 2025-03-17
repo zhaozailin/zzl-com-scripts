@@ -1,12 +1,16 @@
 const path = require('path');
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const pkg = require(path.resolve(__dirname, '../../../package.json'));
+
+const dist = process.env.dist || './dist';
 
 module.exports = {
   entry: './src',
   output: {
-    path: path.resolve(__dirname, '../../../dist'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, '../../../', dist),
+    filename: 'index.development.js',
     libraryTarget: 'commonjs2'
   },
   resolve: {
@@ -90,7 +94,7 @@ module.exports = {
       },
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules\/(?!use-context-selector|zzl-overlayscrollbars-react)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -143,11 +147,14 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      filename: "index.development.css",
+      chunkFilename: "[id].development.css"
     }),
   ],
 };

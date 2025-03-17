@@ -3,7 +3,7 @@ const spawn = require('cross-spawn');
 const dist = process.env.dist || './dist';
 
 // stdio控制打印的位置，detached为false不增加新的进程
-const result = spawn(`rimraf ${dist} && webpack --config node_modules/zzl-com-scripts/config/webpack.prod.js`, {shell: true, detached: false, stdio: 'inherit' });
+const result = spawn(`rimraf ${dist} && webpack --config node_modules/zzl-com-scripts/config/webpack.dev.js && webpack --config node_modules/zzl-com-scripts/config/webpack.prod.js`, {shell: true, detached: false, stdio: 'inherit' });
 
 if (result.signal) {
 
